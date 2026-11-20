@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsbv.github.io/nowhere-404/sitemap.xml

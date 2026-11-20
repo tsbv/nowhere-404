@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nowhere — генератор 404-страниц</title>
+<title>Nowhere — генератор 404 страницы онлайн, готовый HTML</title>
 <meta name="description" content="Минималистичные 404-страницы с SVG-иллюстрацией по теме вашего сайта. Смешные или красивые, один готовый HTML-файл без зависимостей.">
+<link rel="canonical" href="https://tsbv.github.io/nowhere-404/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nowhere">
+<meta property="og:title" content="Nowhere — генератор 404 страницы онлайн">
+<meta property="og:description" content="Красивая или смешная 404-страница с SVG-иллюстрацией по теме сайта. Один готовый HTML-файл, бесплатно.">
+<meta property="og:url" content="https://tsbv.github.io/nowhere-404/">
+<meta property="og:image" content="https://tsbv.github.io/nowhere-404/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nowhere — генератор 404 страницы онлайн">
+<meta name="twitter:image" content="https://tsbv.github.io/nowhere-404/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Nowhere","url":"https://tsbv.github.io/nowhere-404/","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"ru","description":"Генератор 404-страниц с SVG-иллюстрацией по теме сайта. Результат — один HTML-файл.","offers":{"@type":"Offer","price":"0","priceCurrency":"RUB"}}</script>
 <meta name="theme-color" content="#f2efe8">
 <script>
 (function () {
@@ -147,6 +161,8 @@ header{height:52px;padding:0 14px}
   <span class="tag">Генератор 404-страниц</span>
   <div class="hr">
     <button class="ib" id="how" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><span class="t">Как подключить</span></button>
+    <a class="ib" id="donate" href="#" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 9h13v5a5 5 0 01-5 5H9a5 5 0 01-5-5zM17 10h1.5a2.5 2.5 0 010 5H17M8 3v3M12 3v3"/></svg><span class="t">Поддержать</span></a>
+    <button class="ib" id="about" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span class="t">О сервисе</span></button>
     <button class="ib theme" id="theme" type="button" aria-pressed="false" aria-label="Тёмная тема" title="Тёмная тема">
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg>
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
@@ -174,6 +190,7 @@ header{height:52px;padding:0 14px}
     <div class="sec"><div class="lab"><span>Язык страницы</span></div>
       <div class="seg" data-seg="lang"><button type="button" data-v="ru" aria-pressed="true">Русский</button><button type="button" data-v="en" aria-pressed="false">English</button></div></div>
     <label class="chk"><input type="checkbox" id="anim" checked> Лёгкая анимация иллюстрации</label>
+    <label class="chk"><input type="checkbox" id="credit"> Подпись «Сделано в Nowhere» внизу</label>
     <button class="rand" id="rand" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>Случайно</button>
     <button class="btn main go" id="go" type="button">Показать превью</button>
   </section>
@@ -199,6 +216,17 @@ header{height:52px;padding:0 14px}
     <div class="hw"><b>Apache (.htaccess)</b><span>Нажмите, чтобы скопировать:</span><code>ErrorDocument 404 /404.html</code></div>
     <div class="hw"><b>Express</b><span>После всех маршрутов:</span><code>app.use((req, res) =&gt; res.status(404).sendFile(__dirname + "/404.html"));</code></div>
     <p class="note">Файл самодостаточный: стили и иллюстрация внутри, внешних запросов нет.</p>
+  </div>
+</dialog>
+<dialog id="dlgAbout">
+  <div class="dh"><h2>О сервисе</h2><button class="ib" id="ax" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+  <div class="db">
+    <div class="hw"><b>Генератор 404 страницы онлайн</b><span>Nowhere собирает страницу «404 — не найдено» с SVG-иллюстрацией по теме вашего сайта: кофейня, космос, музыка, код, спорт и другие. Выберите тематику, тон (смешной или красивый), палитру и язык, затем скачайте один файл 404.html.</span></div>
+    <div class="hw"><b>Как сделать красивую 404 страницу</b><span>Выберите тему, впишите название сайта и адрес кнопки, нажмите «Скачать 404.html» и положите файл в корень сайта. Подробности под кнопкой «Как подключить».</span></div>
+    <div class="hw"><b>Это бесплатно?</b><span>Да. Страницы можно использовать в личных и коммерческих проектах, подпись не обязательна.</span></div>
+    <div class="hw"><b>Нужны ли внешние файлы?</b><span>Нет. Стили и иллюстрация внутри файла, шрифты системные, запросов к сторонним серверам нет.</span></div>
+    <div class="hw"><b>Работает ли на GitHub Pages и Cloudflare Pages?</b><span>Да, нужен файл 404.html в корне. Также подходит для Netlify, Vercel, nginx и Apache.</span></div>
+    <div class="hw"><b>Мои данные</b><span>Всё считается в браузере, введённый текст никуда не отправляется.</span></div>
   </div>
 </dialog>
 <script>
@@ -296,7 +324,7 @@ var PALS = [
   { n: "Моно", l: ["#fafafa", "#111111", "#111111"], d: ["#111111", "#fafafa", "#fafafa"] }
 ];
 
-var st = { name: "", theme: 0, tone: "f", pal: 0, acc: null, mode: "light", href: "/", btn: "", lang: "ru", anim: true, v: 0, dev: "desk" };
+var st = { name: "", theme: 0, tone: "f", pal: 0, acc: null, mode: "light", href: "/", btn: "", lang: "ru", anim: true, credit: false, v: 0, dev: "desk" };
 
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 function safeHref(h) { h = (h || "").trim(); if (!h || /^\s*(javascript|data|vbscript):/i.test(h)) return "/"; return h; }
@@ -327,11 +355,12 @@ function build() {
     "p{margin-top:14px;max-width:34em;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif;color:color-mix(in srgb,var(--ink) 62%,var(--bg))}" +
     "a{margin-top:30px;display:inline-block;padding:12px 24px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font:500 14px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;transition:background .15s,color .15s,border-color .15s}" +
     "a:hover{background:var(--acc);border-color:var(--acc);color:var(--bg)}a:focus-visible{outline:2px solid var(--acc);outline-offset:3px}" +
+    "footer{padding:0 24px 22px;text-align:center}footer a{margin:0;padding:0;border:0;font:500 11px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--ink) 55%,var(--bg));text-decoration:underline}footer a:hover{background:none;color:var(--acc)}" +
     "@media (max-width:480px){header{padding:16px 18px}main{padding-bottom:40px}}" +
     "@media (max-height:520px){svg{width:min(300px,50vw);margin-bottom:14px}a{margin-top:18px}}" +
     (st.anim ? ANIMCSS : "");
   return "<!doctype html>\n<html lang=\"" + st.lang + "\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<meta name=\"robots\" content=\"noindex\">\n<title>404 · " + esc(c.title) + "</title>\n<style>" + css + "</style>\n</head>\n<body>\n" +
-    "<header><span>" + esc(st.name.trim() || "404") + "</span><span>Error 404</span></header>\n<main>\n" + svg + "\n<h1>" + esc(c.title) + "</h1>\n<p>" + esc(c.sub) + "</p>\n<a href=\"" + esc(safeHref(st.href)) + "\">" + esc(c.btn) + "</a>\n</main>\n</body>\n</html>\n";
+    "<header><span>" + esc(st.name.trim() || "404") + "</span><span>Error 404</span></header>\n<main>\n" + svg + "\n<h1>" + esc(c.title) + "</h1>\n<p>" + esc(c.sub) + "</p>\n<a href=\"" + esc(safeHref(st.href)) + "\">" + esc(c.btn) + "</a>\n</main>\n" + (st.credit ? "<footer><a href=\"https://tsbv.github.io/nowhere-404/\">" + (st.lang === "ru" ? "Сделано в Nowhere" : "Made with Nowhere") + "</a></footer>\n" : "") + "</body>\n</html>\n";
 }
 
 var html = "", pending = false;
@@ -419,6 +448,7 @@ $$("[data-seg]").forEach(function (g) {
 $("#name").addEventListener("input", function (e) { st.name = e.target.value; update(); });
 $("#href").addEventListener("input", function (e) { st.href = e.target.value; update(); });
 $("#btn").addEventListener("input", function (e) { st.btn = e.target.value; update(); });
+$("#credit").addEventListener("change", function (e) { st.credit = e.target.checked; update(); });
 $("#anim").addEventListener("change", function (e) { st.anim = e.target.checked; update(); });
 $("#other").addEventListener("click", function () { st.v++; update(); });
 $("#rand").addEventListener("click", function () {
@@ -441,6 +471,12 @@ $("#copy").addEventListener("click", function () {
   copyText(html).then(function () { flash($("#copy"), "Скопировано"); }, function () { flash($("#copy"), "Не вышло"); });
 });
 
+var DONATE_URL = "";
+if (DONATE_URL) { var dn = $("#donate"); dn.href = DONATE_URL; dn.hidden = false; }
+var dlgA = $("#dlgAbout");
+$("#about").addEventListener("click", function () { dlgA.showModal(); });
+$("#ax").addEventListener("click", function () { dlgA.close(); });
+dlgA.addEventListener("click", function (e) { if (e.target === dlgA) dlgA.close(); });
 var dlg = $("#dlg");
 $("#how").addEventListener("click", function () { dlg.showModal(); });
 $("#dx").addEventListener("click", function () { dlg.close(); });
