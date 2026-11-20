@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nowhere — генератор 404 страницы онлайн, готовый HTML</title>
-<meta name="description" content="Минималистичные 404-страницы с SVG-иллюстрацией по теме вашего сайта. Смешные или красивые, один готовый HTML-файл без зависимостей.">
+<meta name="description" content="Минималистичные 404-страницы с SVG-иллюстрацией по теме вашего сайта. Один готовый HTML-файл без зависимостей.">
 <link rel="canonical" href="https://tsbv.github.io/nowhere-404/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nowhere">
 <meta property="og:title" content="Nowhere — генератор 404 страницы онлайн">
-<meta property="og:description" content="Красивая или смешная 404-страница с SVG-иллюстрацией по теме сайта. Один готовый HTML-файл, бесплатно.">
+<meta property="og:description" content="Минималистичная 404-страница с SVG-иллюстрацией по теме сайта. Один готовый HTML-файл, бесплатно.">
 <meta property="og:url" content="https://tsbv.github.io/nowhere-404/">
 <meta property="og:image" content="https://tsbv.github.io/nowhere-404/og.png">
 <meta property="og:image:width" content="1200">
@@ -177,8 +177,7 @@ header{height:52px;padding:0 14px}
   <section class="panel on" id="panel" aria-label="Настройки">
     <div class="sec"><div class="lab"><span>Сайт</span></div><input type="text" id="name" placeholder="Название сайта, например Кофейня Зерно" maxlength="40" autocomplete="off"></div>
     <div class="sec"><div class="lab"><span>Тематика</span><em id="themeName"></em></div><div class="chips" id="chips"></div></div>
-    <div class="sec"><div class="lab"><span>Тон</span><button type="button" id="other" class="ib" style="height:22px;padding:0 8px;font:500 10.5px/1 Inter,sans-serif;text-transform:none;letter-spacing:0">Другой текст</button></div>
-      <div class="seg" data-seg="tone"><button type="button" data-v="f" aria-pressed="true">Смешной</button><button type="button" data-v="b" aria-pressed="false">Красивый</button></div></div>
+    <div class="sec"><div class="lab"><span>Текст</span><button type="button" id="other" class="ib" style="height:22px;padding:0 8px;font:500 10.5px/1 Inter,sans-serif;text-transform:none;letter-spacing:0">Другой текст</button></div></div>
     <div class="sec"><div class="lab"><span>Палитра</span></div>
       <div class="pal" id="pal"><label class="acc">Акцент <input type="color" id="acc" value="#e2432a" aria-label="Свой акцентный цвет"></label></div></div>
     <div class="sec"><div class="lab"><span>Тема страницы</span></div>
@@ -221,8 +220,8 @@ header{height:52px;padding:0 14px}
 <dialog id="dlgAbout">
   <div class="dh"><h2>О сервисе</h2><button class="ib" id="ax" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
   <div class="db">
-    <div class="hw"><b>Генератор 404 страницы онлайн</b><span>Nowhere собирает страницу «404 — не найдено» с SVG-иллюстрацией по теме вашего сайта: кофейня, космос, музыка, код, спорт и другие. Выберите тематику, тон (смешной или красивый), палитру и язык, затем скачайте один файл 404.html.</span></div>
-    <div class="hw"><b>Как сделать красивую 404 страницу</b><span>Выберите тему, впишите название сайта и адрес кнопки, нажмите «Скачать 404.html» и положите файл в корень сайта. Подробности под кнопкой «Как подключить».</span></div>
+    <div class="hw"><b>Генератор 404 страницы онлайн</b><span>Nowhere собирает страницу «404 — не найдено» с SVG-иллюстрацией по теме вашего сайта: кофейня, космос, музыка, код, спорт и другие. Выберите тематику, палитру и язык, затем скачайте один файл 404.html.</span></div>
+    <div class="hw"><b>Как сделать 404 страницу для сайта</b><span>Выберите тему, впишите название сайта и адрес кнопки, нажмите «Скачать 404.html» и положите файл в корень сайта. Подробности под кнопкой «Как подключить».</span></div>
     <div class="hw"><b>Это бесплатно?</b><span>Да. Страницы можно использовать в личных и коммерческих проектах, подпись не обязательна.</span></div>
     <div class="hw"><b>Нужны ли внешние файлы?</b><span>Нет. Стили и иллюстрация внутри файла, шрифты системные, запросов к сторонним серверам нет.</span></div>
     <div class="hw"><b>Работает ли на GitHub Pages и Cloudflare Pages?</b><span>Да, нужен файл 404.html в корне. Также подходит для Netlify, Vercel, nginx и Apache.</span></div>
@@ -289,30 +288,30 @@ var THEMES = [
 ];
 
 var TX = {
-  coffee: { rf: [["Страница ушла за кофе", "Вернётся, когда проснётся. Попробуйте главную, там уже налито."], ["Тут пусто, как в чашке в понедельник", "Такой страницы нет. Зато есть другие, и они не остыли."]], rb: [["Страница не найдена", "Как последний глоток: была здесь, а теперь только тепло и тишина."], ["Здесь ничего нет", "Аромат остался, страницы нет. Вернитесь, мы заварим новую."]],
-    ef: [["This page went for coffee", "Back when it wakes up. Try the homepage, it is already poured."], ["Empty, like a cup on Monday", "No such page. Plenty of others, still warm."]], eb: [["Page not found", "Like the last sip: it was here, now only warmth and quiet."], ["Nothing here", "The aroma stayed, the page did not. Come back, we will brew another."]] },
-  space: { rf: [["Хьюстон, у нас 404", "Эта страница улетела за пределы известной вселенной."], ["Страница в чёрной дыре", "Свет оттуда не возвращается, а вы можете: нажмите кнопку."]], rb: [["Страница не найдена", "Где-то между звёзд, но не здесь. Вернёмся на орбиту."], ["Пустота", "Свет этой страницы ещё в пути. Мы его не дождёмся."]],
-    ef: [["Houston, we have a 404", "This page flew past the edge of the known universe."], ["This page is in a black hole", "Light cannot return from there, but you can: press the button."]], eb: [["Page not found", "Somewhere between the stars, but not here. Back to orbit."], ["Emptiness", "The light of this page is still on its way. We will not wait for it."]] },
-  music: { rf: [["Эту страницу заело", "Игла дошла до конца, а страницы нет. Переверните пластинку."], ["Трек не найден", "Мы искали везде, даже на стороне Б."]], rb: [["Страница не найдена", "Тишина между песнями тоже часть музыки. Вернитесь к началу."], ["Здесь тихо", "Игла скользит по пустой канавке. Страницы нет."]],
-    ef: [["This page is stuck", "The needle hit the end and the page is missing. Flip the record."], ["Track not found", "We looked everywhere, even on side B."]], eb: [["Page not found", "The silence between songs is music too. Return to the start."], ["It is quiet here", "The needle glides over an empty groove. The page is gone."]] },
-  food: { rf: [["Кусочек страницы съеден", "Кто-то успел раньше. Закажем новую на главной?"], ["404: пицца без куска", "Страницы нет, но на главной ещё много вкусного."]], rb: [["Страница не найдена", "Одного ломтика не хватает, и это единственное, чего нет за этим столом."], ["Нет такого блюда", "Меню изменилось. Загляните на главную, там есть из чего выбрать."]],
-    ef: [["Someone ate this page", "Too slow. Order a fresh one on the homepage?"], ["404: pizza, one slice short", "The page is gone, but the homepage is still full of good things."]], eb: [["Page not found", "One slice is missing, the only thing absent from this table."], ["No such dish", "The menu has changed. Visit the homepage, there is plenty to choose from."]] },
-  code: { rf: [["Error 404: смысл не найден", "У нас это работало. Точнее, никогда не запускалось."], ["Segfault, но в вебе", "Страница не существует. Проверьте адрес, а не себя."]], rb: [["Страница не найдена", "Пустая строка после курсора. Начните заново с главной."], ["Нет такого пути", "Ссылка ведёт в никуда. Курсор ждёт нового запроса."]],
-    ef: [["Error 404: meaning not found", "It worked on our machine. Actually, it never ran."], ["Segfault, but on the web", "The page does not exist. Check the address, not yourself."]], eb: [["Page not found", "An empty line after the cursor. Start over from the homepage."], ["No such path", "The link leads nowhere. The cursor waits for a new request."]] },
-  travel: { rf: [["Вы заблудились", "Компас говорит, что страница где-то там. Не говорит где."], ["Здесь не было и не будет", "Даже навигатор пожал плечами. Вернитесь на главную."]], rb: [["Страница не найдена", "Не все дороги ведут к цели. Вернёмся к началу пути."], ["Неизвестная территория", "На карте это место пока не отмечено."]],
-    ef: [["You are lost", "The compass says the page is out there. It does not say where."], ["Nothing here, ever", "Even the navigator shrugged. Head back to the homepage."]], eb: [["Page not found", "Not every road leads to a destination. Back to the beginning."], ["Uncharted territory", "This place is not yet marked on the map."]] },
-  sport: { rf: [["Мимо кольца", "Страница не найдена, но у вас есть ещё одна попытка."], ["Мяч улетел на трибуны", "Вернём его в игру через главную."]], rb: [["Страница не найдена", "Бросок ушёл за пределы площадки. Начнём новую игру."], ["Вне игры", "Эта страница за боковой линией. Вернитесь на поле."]],
-    ef: [["Missed the hoop", "Page not found, but you have one more shot."], ["The ball flew into the stands", "We will get it back in play via the homepage."]], eb: [["Page not found", "The shot went out of bounds. Let us start a new game."], ["Out of play", "This page is past the sideline. Return to the court."]] },
-  nature: { rf: [["Страница завяла", "Её забыли полить. Но на главной ещё всё цветёт."], ["Тут ничего не выросло", "Семечко посадили, страница не взошла."]], rb: [["Страница не найдена", "Тихо, как в саду на рассвете, но страницы здесь нет."], ["Здесь пока ничего не растёт", "Вернитесь позже или загляните на главную."]],
-    ef: [["This page wilted", "Nobody watered it. The homepage is still in bloom."], ["Nothing grew here", "The seed was planted, the page never sprouted."]], eb: [["Page not found", "Quiet as a garden at dawn, but the page is not here."], ["Nothing grows here yet", "Come back later or visit the homepage."]] },
-  games: { rf: [["Game over: страница не найдена", "Вы нашли секретный уровень. К сожалению, пустой."], ["Босс съел эту страницу", "Продолжить? Нажмите кнопку, чтобы вернуться в игру."]], rb: [["Страница не найдена", "Уровень не загружен. Пиксели на месте, страницы нет."], ["Конец уровня", "Дальше пути нет. Начните с начала."]],
-    ef: [["Game over: page not found", "You found a secret level. Sadly, it is empty."], ["A boss ate this page", "Continue? Press the button to get back in the game."]], eb: [["Page not found", "The level did not load. The pixels are here, the page is not."], ["End of the level", "No way further. Start from the beginning."]] },
-  finance: { rf: [["Страница упала в цене до нуля", "Аналитики не предупреждали. Вернитесь к росту на главной."], ["Инвестиция не окупилась", "Страницы нет, зато на главной хорошая доходность."]], rb: [["Страница не найдена", "График идёт вниз, а страница исчезла. Вернёмся к началу."], ["Нет данных", "По этому адресу ничего нет. Проверьте ссылку."]],
-    ef: [["This page dropped to zero", "Analysts did not warn us. Return to growth on the homepage."], ["The investment did not pay off", "No page here, but the homepage has solid returns."]], eb: [["Page not found", "The chart goes down and the page has vanished. Back to the start."], ["No data", "Nothing exists at this address. Check the link."]] },
-  health: { rf: [["Пульс есть, страницы нет", "Врачи разводят руками. Прописано: вернуться на главную."], ["Страница ушла на больничный", "Вернётся не скоро. Загляните на главную."]], rb: [["Страница не найдена", "Спокойный вдох и выдох. Вернёмся туда, где всё в порядке."], ["Здесь тихо", "Иногда нужна пауза. Страницы нет, но есть главная."]],
-    ef: [["There is a pulse, no page", "Doctors shrug. The prescription: go back to the homepage."], ["This page is on sick leave", "It will not be back soon. Visit the homepage."]], eb: [["Page not found", "A calm breath in, a breath out. Back to where all is well."], ["It is quiet here", "Sometimes a pause is needed. No page here, but the homepage is."]] },
-  shop: { rf: [["Корзина пуста, как и эта страница", "Вернитесь в магазин, там есть что купить."], ["Товар закончился", "Страницу разобрали. Ищите другие на главной."]], rb: [["Страница не найдена", "Пакет пуст. Вернитесь в каталог."], ["Нет в наличии", "Этой страницы больше нет, но есть многое другое."]],
-    ef: [["The cart is empty, like this page", "Back to the shop, there is plenty to buy."], ["Out of stock", "The page sold out. Find others on the homepage."]], eb: [["Page not found", "The bag is empty. Return to the catalog."], ["Not available", "This page is gone. Plenty of others remain."]] }
+  coffee: { rb: [["Страница не найдена", "Как последний глоток: была здесь, а теперь только тепло и тишина."], ["Здесь ничего нет", "Аромат остался, страницы нет. Вернитесь, мы заварим новую."]],
+    eb: [["Page not found", "Like the last sip: it was here, now only warmth and quiet."], ["Nothing here", "The aroma stayed, the page did not. Come back, we will brew another."]] },
+  space: { rb: [["Страница не найдена", "Где-то между звёзд, но не здесь. Вернёмся на орбиту."], ["Пустота", "Свет этой страницы ещё в пути. Мы его не дождёмся."]],
+    eb: [["Page not found", "Somewhere between the stars, but not here. Back to orbit."], ["Emptiness", "The light of this page is still on its way. We will not wait for it."]] },
+  music: { rb: [["Страница не найдена", "Тишина между песнями тоже часть музыки. Вернитесь к началу."], ["Здесь тихо", "Игла скользит по пустой канавке. Страницы нет."]],
+    eb: [["Page not found", "The silence between songs is music too. Return to the start."], ["It is quiet here", "The needle glides over an empty groove. The page is gone."]] },
+  food: { rb: [["Страница не найдена", "Одного ломтика не хватает, и это единственное, чего нет за этим столом."], ["Нет такого блюда", "Меню изменилось. Загляните на главную, там есть из чего выбрать."]],
+    eb: [["Page not found", "One slice is missing, the only thing absent from this table."], ["No such dish", "The menu has changed. Visit the homepage, there is plenty to choose from."]] },
+  code: { rb: [["Страница не найдена", "Пустая строка после курсора. Начните заново с главной."], ["Нет такого пути", "Ссылка ведёт в никуда. Курсор ждёт нового запроса."]],
+    eb: [["Page not found", "An empty line after the cursor. Start over from the homepage."], ["No such path", "The link leads nowhere. The cursor waits for a new request."]] },
+  travel: { rb: [["Страница не найдена", "Не все дороги ведут к цели. Вернёмся к началу пути."], ["Неизвестная территория", "На карте это место пока не отмечено."]],
+    eb: [["Page not found", "Not every road leads to a destination. Back to the beginning."], ["Uncharted territory", "This place is not yet marked on the map."]] },
+  sport: { rb: [["Страница не найдена", "Бросок ушёл за пределы площадки. Начнём новую игру."], ["Вне игры", "Эта страница за боковой линией. Вернитесь на поле."]],
+    eb: [["Page not found", "The shot went out of bounds. Let us start a new game."], ["Out of play", "This page is past the sideline. Return to the court."]] },
+  nature: { rb: [["Страница не найдена", "Тихо, как в саду на рассвете, но страницы здесь нет."], ["Здесь пока ничего не растёт", "Вернитесь позже или загляните на главную."]],
+    eb: [["Page not found", "Quiet as a garden at dawn, but the page is not here."], ["Nothing grows here yet", "Come back later or visit the homepage."]] },
+  games: { rb: [["Страница не найдена", "Уровень не загружен. Пиксели на месте, страницы нет."], ["Конец уровня", "Дальше пути нет. Начните с начала."]],
+    eb: [["Page not found", "The level did not load. The pixels are here, the page is not."], ["End of the level", "No way further. Start from the beginning."]] },
+  finance: { rb: [["Страница не найдена", "График идёт вниз, а страница исчезла. Вернёмся к началу."], ["Нет данных", "По этому адресу ничего нет. Проверьте ссылку."]],
+    eb: [["Page not found", "The chart goes down and the page has vanished. Back to the start."], ["No data", "Nothing exists at this address. Check the link."]] },
+  health: { rb: [["Страница не найдена", "Спокойный вдох и выдох. Вернёмся туда, где всё в порядке."], ["Здесь тихо", "Иногда нужна пауза. Страницы нет, но есть главная."]],
+    eb: [["Page not found", "A calm breath in, a breath out. Back to where all is well."], ["It is quiet here", "Sometimes a pause is needed. No page here, but the homepage is."]] },
+  shop: { rb: [["Страница не найдена", "Пакет пуст. Вернитесь в каталог."], ["Нет в наличии", "Этой страницы больше нет, но есть многое другое."]],
+    eb: [["Page not found", "The bag is empty. Return to the catalog."], ["Not available", "This page is gone. Plenty of others remain."]] }
 };
 
 var PALS = [
@@ -324,7 +323,7 @@ var PALS = [
   { n: "Моно", l: ["#fafafa", "#111111", "#111111"], d: ["#111111", "#fafafa", "#fafafa"] }
 ];
 
-var st = { name: "", theme: 0, tone: "f", pal: 0, acc: null, mode: "light", href: "/", btn: "", lang: "ru", anim: true, credit: false, v: 0, dev: "desk" };
+var st = { name: "", theme: 0, tone: "b", pal: 0, acc: null, mode: "light", href: "/", btn: "", lang: "ru", anim: true, credit: false, v: 0, dev: "desk" };
 
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 function safeHref(h) { h = (h || "").trim(); if (!h || /^\s*(javascript|data|vbscript):/i.test(h)) return "/"; return h; }
@@ -441,7 +440,6 @@ $$("[data-seg]").forEach(function (g) {
   g.addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b || !g.contains(b)) return;
     st[g.dataset.seg] = b.dataset.v;
-    if (g.dataset.seg === "tone") st.v = 0;
     syncUI(); update();
   });
 });
@@ -454,7 +452,6 @@ $("#other").addEventListener("click", function () { st.v++; update(); });
 $("#rand").addEventListener("click", function () {
   st.theme = Math.floor(Math.random() * THEMES.length);
   st.pal = Math.floor(Math.random() * PALS.length); st.acc = null;
-  st.tone = Math.random() < 0.5 ? "f" : "b";
   st.v = Math.floor(Math.random() * 2);
   syncUI(); update();
 });
